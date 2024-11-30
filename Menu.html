@@ -1,0 +1,1759 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>CafeGo Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        html {
+            font-family: 'Open Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px;
+            width: 100%;
+            height: 70px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        header .logo a {
+            font-size: 30px;
+            color: white;
+            padding: 15px 30px;
+            
+        }
+
+        header .logo a span {
+            color: burlywood;
+        }
+
+        header nav ul {
+            display: flex;
+        }
+
+        header nav ul li a {
+            margin: 5px 20px;
+            font-size: 18px;
+            color: white;
+            padding: 10px 10px;
+        }
+
+        header nav ul li a:hover {
+            border-bottom: 2px solid white;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            min-height: 25vh;
+            width: 100%;
+            background-image: linear-gradient(to bottom right, rgba(96, 76, 76, .6), rgba(96, 76, 76, .6)), url("https://static.myfigurecollection.net/upload/pictures/2022/06/26/3150895.gif");
+        }
+
+        .content h2 {
+            font-size: 32px;
+            padding: 5px;
+            color: white;
+        }
+
+        .content p {
+            font-size: 22px;
+            color: white;
+        }
+
+        .menu {
+            background-color: #333333;
+            width: 100%;
+        }
+
+        .menu .menu-header {
+            display: flex;
+            padding: 10px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu-header h3 {
+            color: burlywood;
+            padding: 10px 30px;
+        }
+
+        .menu-header h4 {
+            color: burlywood;
+            padding: 10px 20px;
+        }
+
+        .menu .menu-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 50px 0;
+            flex-wrap: wrap;
+            background-color: #404040;
+        }
+
+        .menu .menu-content .hot-coffees,
+        .mocha-coffees,
+        .macha-coffees {
+            width: 250px;
+        }
+
+        .menu .menu-content .hot-coffees .hot-coffees-images img {
+            border-radius: 50%;
+        }
+
+        .menu .menu-content .mocha-coffees .mocha-coffees-images img {
+            border-radius: 50%;
+        }
+
+        .menu .menu-content .macha-coffees .macha-coffees-images img {
+            border-radius: 50%;
+        }
+
+        .menu .menu-content .hot-coffees-body,
+        .mocha-coffees-body,
+        .macha-coffees-body {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .menu .menu-content .hot-coffees-body h2,
+        .mocha-coffees-body h2,
+        .macha-coffees-body h2 {
+            color: burlywood;
+        }
+
+        .menu .menu-content .hot-coffees-body label,
+        .mocha-coffees-body label,
+        .macha-coffees-body label {
+            margin: 10px;
+            color: burlywood;
+        }
+        .shop{
+            background-color: #333333;
+            width: 100%;
+        }
+        .shop .shop-header{
+            display: flex;
+            padding: 10px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .shop-header h3{
+            color: burlywood;
+            padding:10px 30px;
+        }
+        .shop-header h4{
+            color: burlywood;
+            padding: 10px 20px;
+        }
+        .shop-box{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: #404040;
+            padding: 50px 0;
+            flex-wrap: wrap;
+        }
+        .shop-box .card{
+            width: 280px;
+            margin: 20px;
+        }
+        .shop-box .card-image{
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+        }
+        .shop-box .card-image img:hover{
+            transform: scale(1.1);
+            transition: transform .4s ease-in-out;
+            
+        }
+        .shop-box .card-body{
+            padding:20px;
+            color: white;
+            border: 3px solid #3b3b3b
+        }
+        .shop-box .card-body h3{
+            padding:10px 0;
+        }
+        .shop-box .card-body i{
+            color:yellow;
+            font-size: 10px;
+            position: relative;
+            bottom: 5px;
+        }
+        .shop-box .card-body .cash{
+            font-size: 22px;
+            margin-left: 90px;
+
+        }
+        .logo{
+            position: absolute;
+            width: 8em;
+            top: 2%;
+            
+        }
+        .nav{
+            left: 71%;
+            position: absolute;
+        }
+        .size{
+            background-color: #333333;
+            width: 100%;
+        }
+        .size .size-header {
+            display: flex;
+            padding: 10px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .size-header h2 {
+            color: burlywood;
+            padding: 10px 20px;
+        }
+        .size .size-content{
+            display: flex;
+            align-items:center ;
+            justify-content: space-evenly;
+            padding: 50px 0;
+            flex-wrap: wrap;
+            background-color: #404040;
+        }
+        .size .size-image {
+            position: absolute;
+            width: 100%;
+            top: 239%;
+        }
+        .cafegomenu{
+            font-size: 25px;
+            font-style:italic;
+        }
+        .small{
+            position: absolute;
+            color:#523A28;
+            font-size: 15px;
+            left: 72%;
+            top: 257%;
+            font-style: italic;
+        }
+        .medium{
+            position: absolute;
+            color:#523A28;
+            font-size: 15px;
+            left: 81%;
+            top: 257%;
+            font-style: italic;
+        }
+        .large{
+            position: absolute;
+            color:#523A28;
+            font-size: 15px;
+            left: 92%;
+            top: 257%;
+            font-style: italic;
+        }
+        .border{
+            width: 1865px;
+            height: 35px;
+            background-color: blanchedalmond;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            top: 256%;
+        }
+        .Espresso{
+            color: #D0B49F;
+            position: absolute;
+            font-style: italic;
+            font-size: 12px;
+            left: 1%;
+            top: 263%;
+        }
+        .Iced{
+            color: #D0B49F;
+            position: absolute;
+            font-style: italic;
+            font-size: 12px;
+            left: 1%;
+            top: 268%;
+        }
+        .Macchiato{
+            color: #D0B49F;
+            position: absolute;
+            font-style: italic;
+            font-size: 12px;
+            left: 1%;
+            top: 273%;
+        }
+        .Brewed{
+            color: #D0B49F;
+            position: absolute;
+            font-style: italic;
+            font-size: 12px;
+            left: 1%;
+            top: 278%;
+        }
+        .Caramel{
+            color: #D0B49F;
+            position: absolute;
+            font-style: italic;
+            font-size: 12px;
+            left: 1%;
+            top: 283%;
+        }
+        .Café{
+            color: #D0B49F;
+            position: absolute;
+            font-style: italic;
+            font-size: 12px;
+            left: 1%;
+            top: 288%;
+        }
+        .Irish{
+            color: #D0B49F;
+            position: absolute;
+            font-style: italic;
+            font-size: 12px;
+            left: 1%;
+            top: 293%;
+        }
+        .Americano{
+            color: #D0B49F;
+            position: absolute;
+            font-style: italic;
+            font-size: 12px;
+            left: 1%;
+            top: 298%;
+        }
+        .Latte{
+            color: #D0B49F;
+            position: absolute;
+            font-style: italic;
+            font-size: 12px;
+            left: 1%;
+            top: 303%;
+        }
+        .Caffeé{
+            color: #D0B49F;
+            position: absolute;
+            font-style: italic;
+            font-size: 12px;
+            left: 1%;
+            top: 308%;
+        }
+        .Macha{
+            color: #D0B49F;
+            position: absolute;
+            font-style: italic;
+            font-size: 12px;
+            left: 1%;
+            top: 313%;
+        }
+        .Hot{
+            color: #D0B49F;
+            position: absolute;
+            font-style: italic;
+            font-size: 12px;
+            left: 1%;
+            top: 318%;
+        }
+        .Vanilla{
+            color: #D0B49F;
+            position: absolute;
+            font-style: italic;
+            font-size: 12px;
+            left: 1%;
+            top: 323%;
+        }
+        .mess{
+            color: #D0B49F;
+            position: absolute;
+            font-style: italic;
+            font-size: 20px;
+            left: 25%;
+            top: 335%;
+        }
+        .ngi{
+            color: white;
+            font-style: italic;
+            left: 73%;
+            position: absolute;
+            font-size: 20px;
+            top: 263%;
+        }
+        .ngi2{
+            color: white;
+            font-style: italic;
+            left: 83%;
+            position: absolute;
+            font-size: 20px;
+            top: 263%;
+        }
+        .ngi3{
+            color: white;
+            font-style: italic;
+            left: 93%;
+            position: absolute;
+            font-size: 20px;
+            top: 263%;
+        }
+        .ngi4{
+            color: white;
+            font-style: italic;
+            left: 73%;
+            position: absolute;
+            font-size: 20px;
+            top: 268%;
+        }
+        .ngi5{
+            color: white;
+            font-style: italic;
+            left: 83%;
+            position: absolute;
+            font-size: 20px;
+            top: 268%;
+        }
+        .ngi6{
+            color: white;
+            font-style: italic;
+            left: 93%;
+            position: absolute;
+            font-size: 20px;
+            top: 268%;
+        }
+        .ngi7{
+            color: white;
+            font-style: italic;
+            left: 73%;
+            position: absolute;
+            font-size: 20px;
+            top: 273%;
+        }
+        .ngi8{
+            color: white;
+            font-style: italic;
+            left: 83%;
+            position: absolute;
+            font-size: 20px;
+            top: 273%;
+        }
+        .ngi9   {
+            color: white;
+            font-style: italic;
+            left: 93%;
+            position: absolute;
+            font-size: 20px;
+            top: 273%;
+        }
+        .ngi10   {
+            color: white;
+            font-style: italic;
+            left: 73%;
+            position: absolute;
+            font-size: 20px;
+            top: 278%;
+        }
+        .ngi11  {
+            color: white;
+            font-style: italic;
+            left: 83%;
+            position: absolute;
+            font-size: 20px;
+            top: 278%;
+        }
+        .ngi12  {
+            color: white;
+            font-style: italic;
+            left: 93%;
+            position: absolute;
+            font-size: 20px;
+            top: 278%;
+        }
+        .ngi13  {
+            color: white;
+            font-style: italic;
+            left: 73%;
+            position: absolute;
+            font-size: 20px;
+            top: 283%;
+        }
+        .ngi14  {
+            color: white;
+            font-style: italic;
+            left: 83%;
+            position: absolute;
+            font-size: 20px;
+            top: 283%;
+        }
+        .ngi15  {
+            color: white;
+            font-style: italic;
+            left: 93%;
+            position: absolute;
+            font-size: 20px;
+            top: 283%;
+        }
+        .ngi16  {
+            color: white;
+            font-style: italic;
+            left: 73%;
+            position: absolute;
+            font-size: 20px;
+            top: 288%;
+        }
+        .ngi17  {
+            color: white;
+            font-style: italic;
+            left: 83%;
+            position: absolute;
+            font-size: 20px;
+            top: 288%;
+        }
+        .ngi18  {
+            color: white;
+            font-style: italic;
+            left: 93%;
+            position: absolute;
+            font-size: 20px;
+            top: 288%;
+        }
+        .ngi19  {
+            color: white;
+            font-style: italic;
+            left: 73%;
+            position: absolute;
+            font-size: 20px;
+            top: 293%;
+        }
+        .ngi20  {
+            color: white;
+            font-style: italic;
+            left: 83%;
+            position: absolute;
+            font-size: 20px;
+            top: 293%;
+        }
+        .ngi21  {
+            color: white;
+            font-style: italic;
+            left: 93%;
+            position: absolute;
+            font-size: 20px;
+            top: 293%;
+        }
+        .ngi22  {
+            color: white;
+            font-style: italic;
+            left: 73%;
+            position: absolute;
+            font-size: 20px;
+            top: 298%;
+        }
+        .ngi23  {
+            color: white;
+            font-style: italic;
+            left: 83%;
+            position: absolute;
+            font-size: 20px;
+            top: 298%;
+        }
+        .ngi24  {
+            color: white;
+            font-style: italic;
+            left: 93%;
+            position: absolute;
+            font-size: 20px;
+            top: 298%;
+        }
+        .ngi25  {
+            color: white;
+            font-style: italic;
+            left: 73%;
+            position: absolute;
+            font-size: 20px;
+            top: 303%;
+        }
+        .ngi26  {
+            color: white;
+            font-style: italic;
+            left: 83%;
+            position: absolute;
+            font-size: 20px;
+            top: 303%;
+        }
+        .ngi27  {
+            color: white;
+            font-style: italic;
+            left: 93%;
+            position: absolute;
+            font-size: 20px;
+            top: 303%;
+        }
+        .ngi28  {
+            color: white;
+            font-style: italic;
+            left: 73%;
+            position: absolute;
+            font-size: 20px;
+            top: 308%;
+        }
+        .ngi29  {
+            color: white;
+            font-style: italic;
+            left: 83%;
+            position: absolute;
+            font-size: 20px;
+            top: 308%;
+        }
+        .ngi30 {
+            color: white;
+            font-style: italic;
+            left: 93%;
+            position: absolute;
+            font-size: 20px;
+            top: 308%;
+        }
+        .ngi31  {
+            color: white;
+            font-style: italic;
+            left: 73%;
+            position: absolute;
+            font-size: 20px;
+            top: 313%;
+        }
+        .ngi32  {
+            color: white;
+            font-style: italic;
+            left: 83%;
+            position: absolute;
+            font-size: 20px;
+            top: 313%;
+        }
+        .ngi33  {
+            color: white;
+            font-style: italic;
+            left: 93%;
+            position: absolute;
+            font-size: 20px;
+            top: 313%;
+        }
+        .ngi34  {
+            color: white;
+            font-style: italic;
+            left: 73%;
+            position: absolute;
+            font-size: 20px;
+            top: 318%;
+        }
+        .ngi35  {
+            color: white;
+            font-style: italic;
+            left: 83%;
+            position: absolute;
+            font-size: 20px;
+            top: 318%;
+        }
+        .ngi36  {
+            color: white;
+            font-style: italic;
+            left: 93%;
+            position: absolute;
+            font-size: 20px;
+            top: 318%;
+        }
+        .ngi37  {
+            color: white;
+            font-style: italic;
+            left: 73%;
+            position: absolute;
+            font-size: 20px;
+            top: 323%;
+        }
+        .ngi38  {
+            color: white;
+            font-style: italic;
+            left: 83%;
+            position: absolute;
+            font-size: 20px;
+            top: 323%;
+        }
+        .ngi39  {
+            color: white;
+            font-style: italic;
+            left: 93%;
+            position: absolute;
+            font-size: 20px;
+            top: 323%;
+        }
+
+        .bord{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 71%;
+            top: 261%;
+        }
+        .bord2{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 81%;
+            top: 261%;
+        }
+        .bord3{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 91%;
+            top: 261%;
+        }
+        .bord4{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 71%;
+            top: 266%;
+        }
+        .bord5{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 81%;
+            top: 266%;
+        }
+        .bord6{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 91%;
+            top: 266%;
+        }
+        .bord7{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 71%;
+            top: 271%;
+        }
+        .bord8{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 81%;
+            top: 271%;
+        }
+        .bord9{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 91%;
+            top: 271%;
+        }
+        .bord10{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 71%;
+            top: 276%;
+        }
+        .bord11{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 81%;
+            top: 276%;
+        }
+        .bord12{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 91%;
+            top: 276%;
+        }
+        .bord13{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 71%;
+            top: 281%;
+        }
+        .bord14{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 81%;
+            top: 281%;
+        }
+        .bord15{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 91%;
+            top: 281%;
+        }
+        .bord16{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 71%;
+            top: 286%;
+        }
+        .bord17{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 81%;
+            top: 286%;
+        }
+        .bord18{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 91%;
+            top: 286%;
+        }
+        .bord19{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 71%;
+            top: 291%;
+        }
+        .bord20{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 81%;
+            top: 291%;
+        }
+        .bord21{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 91%;
+            top: 291%;
+        }
+        .bord22{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 71%;
+            top: 296%;
+        }
+        .bord23{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 81%;
+            top: 296%;
+        }
+        .bord24{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 91%;
+            top: 296%;
+        }
+        .bord25{
+            width: 100px;
+            height: 35px;
+            background-color: 523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 71%;
+            top: 301%;
+        }
+        .bord26{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 81%;
+            top: 301%;
+        }
+        .bord27{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 91%;
+            top: 301%;
+        }
+        .bord28{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 71%;
+            top: 306%;
+        }
+        .bord29{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 81%;
+            top: 306%;
+        }
+        .bord30{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 91%;
+            top: 306%;
+        }
+        .bord31{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 71%;
+            top: 311%;
+        }
+        .bord32{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 81%;
+            top: 311%;
+        }
+        .bord33{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 91%;
+            top: 311%;
+        }
+        .bord34{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 71%;
+            top: 316%;
+        }
+        .bord35{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 81%;
+            top: 316%;
+        }
+        .bord36{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 91%;
+            top: 316%;
+        }
+        .bord37{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 71%;
+            top: 321%;
+        }
+        .bord38{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 81%;
+            top: 321%;
+        }
+        .bord39{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 91%;
+            top: 321%;
+        }
+        .bord40{
+            width: 100px;
+            height: 35px;
+            background-color: #523A28;
+            margin: 10;
+            position: absolute;
+            border-radius: 25px;
+            padding: 10px;
+            left: 71%;
+            top: 301%;
+        }
+        .Button {
+            display: inline-block;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #ff6347;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .Button:hover {
+            background-color: #ff471a;
+        }
+        
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://i.ibb.co/xqCMFqw/371509563-1520752665149850-4863602814683537047-n-removebg-preview.png">
+        </div>
+        <div class="nav">
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="#menu">Best Seller</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#size">Size & Price </a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <div class="content">
+        <p>CafeGo</p>
+        <p>Fuel your day with the bold bliss of our coffee.</p>
+    </div>
+    <div class="menu" id="menu">
+        <div class="menu-header">
+            <h3>Best Seller</h3>
+            <h4>Cafe Go Menu</h4>
+        </div>
+        <div class="menu-content">
+            <div class="hot-coffees">
+                <div class="hot-coffees-images">
+                    <img src="https://www.nescafe.com/mt/sites/default/files/2023-08/Nes_Web3_Article_Header_Espresso_1448x1240.png"
+                        alt="">
+                </div>
+                <div class="hot-coffees-body">
+                    <h2>Espresso</h2>
+                    <label> Masarap po ito!!! :3 </label>
+                </div>
+            </div>
+            <div class="mocha-coffees">
+                <div class="mocha-coffees-images">
+                    <img src="https://www.starbucksathome.com/gb/sites/default/files/2021-04/10032021_CafeMocha_LS-min.png"
+                        alt="">
+                </div>
+                <div class="mocha-coffees-body">
+                    <h2>Caffeé mocha</h2>
+                    <label> Masarap po ito!!! :3 </label>
+                </div>
+            </div>
+            <div class="macha-coffees">
+                <div class="macha-coffees-images">
+                    <img src="https://gocodough.com/wp-content/uploads/2021/06/matcha-latte.png"
+                        alt="">
+                </div>
+                <div class="macha-coffees-body">
+                    <h2>Macha</h2>
+                    <label> Masarap po ito!!! :3 </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shop" id="shop">
+        <div class="shop-header">
+            <h3>Shop</h3>
+            <h4>Cafe Go Coffee Drinks</h4>
+        </div>
+        <div class="shop-box">
+            <div class="item-1">
+                <div class="card">
+                    <div class="card-image">
+                        <img
+                            src="https://www.nescafe.com/mt/sites/default/files/2023-08/Nes_Web3_Article_Header_Espresso_1448x1240.png">
+                    </div>
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <h3>Espresso</h3>
+                        <label>Hindi ka mag sisisi</label>
+                        <br><br>
+                        <div class="Button">
+                            <a href="Espresso.html" class="buy-now-button">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-2">
+                <div class="card">
+                    <div class="card-image">
+                        <img
+                            src="https://www.starbucksathome.com/gb/sites/default/files/2021-04/10032021_IcedCaramel_Work_CS-min.png">
+                    </div>
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                        <h3>Iced macchiato</h3>
+                        <label>Hindi ka mag sisisi</label>
+                        <br><br>
+                        <div class="Button">
+                            <a href="Iced macchiato.html" class="buy-now-button">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-3">
+                <div class="card">
+                    <div class="card-image">
+                        <img
+                            src="https://www.nescafe.com/gb/sites/default/files/2023-08/Nes_Web3_Article_Header_Macchiato_1448x1240.png">
+                    </div>
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                        <h3>Macchiato</h3>
+                        <label>Hindi ka mag sisisi</label>
+                        <br><br>
+                        <div class="Button">
+                            <a href="Macchiato.html" class="buy-now-button">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-4">
+                <div class="card">
+                    <div class="card-image">
+                        <img
+                            src="https://static.vecteezy.com/system/resources/previews/026/844/952/original/isolated-iced-americano-coffee-on-the-black-cup-clipart-on-transparent-background-coffee-cup-refreshing-aromatic-brewed-coffee-cup-isolated-clipart-free-isolated-black-coffee-cup-free-png.png">
+                    </div>
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <h3>Brewed coffee</h3>
+                        <label>Hindi ka mag sisisi</label>
+                        <br><br>
+                        <div class="Button">
+                            <a href="Brewed coffee.html" class="buy-now-button">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-5">
+                <div class="card">
+                    <div class="card-image">
+                        <img
+                            src="https://www.starbucksathome.com/ca/sites/default/files/styles/nutrition_instruction_image/public/2021-03/CaramelMacchiato_LongShadow.png?itok=uhA0kypB">
+                    </div>
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <h3>Caramel macchiato</h3>
+                        <label>Hindi ka mag sisisi</label>
+                        <br><br>
+                        <div class="Button">
+                            <a href="Caramel macchiato.html" class="buy-now-button">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-6">
+                <div class="card">
+                    <div class="card-image">
+                        <img
+                            src="https://www.starbucksathome.com/ca/sites/default/files/styles/recipe_recommendation/public/2021-03/Vanilla%20Latte_LongShadow_Cream.png?itok=1NfuSOif">
+                    </div>
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <h3>Café misto</h3>
+                        <label>Hindi ka mag sisisi</label>
+                        <br><br>
+                        <div class="Button">
+                            <a href="Café misto.html" class="buy-now-button">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-7">
+                <div class="card">
+                    <div class="card-image">
+                        <img
+                            src="https://stories.starbucks.com/uploads/sites/9/2019/12/IrishCreamHotAmericano-1024x1024.png">
+                    </div>
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <h3>Irish cream americano</h3>
+                        <label>Hindi ka mag sisisi</label>
+                        <br><br>
+                        <div class="Button">
+                            <a href="Irish cream americano.html" class="buy-now-button">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-8">
+                <div class="card">
+                    <div class="card-image">
+                        <img
+                            src="https://png.pngtree.com/png-clipart/20230407/ourmid/pngtree-american-style-coffee-cup-png-image_6682159.png">
+                    </div>
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <h3>Americano</h3>
+                        <label>Hindi ka mag sisisi</label>
+                        <br><br>
+                        <div class="Button">
+                            <a href="Americano.html" class="buy-now-button">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-9">
+                <div class="card">
+                    <div class="card-image">
+                        <img
+                            src="https://png.pngtree.com/png-vector/20230930/ourmid/pngtree-cold-brewed-iced-latte-coffee-on-plastic-cup-side-view-generative-png-image_10154255.png">
+                    </div>
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <h3>Iced Latte</h3>
+                        <label>Hindi ka mag sisisi</label>
+                        <br><br>
+                        <div class="Button">
+                            <a href="Iced Latte.html" class="buy-now-button">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-10">
+                <div class="card">
+                    <div class="card-image">
+                        <img
+                            src="https://www.starbucksathome.com/gb/sites/default/files/2021-04/10032021_CafeMocha_LS-min.png">
+                    </div>
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <h3>Caffeé mocha</h3>
+                        <label>Hindi ka mag sisisi</label>
+                        <br><br>
+                        <div class="Button">
+                            <a href="Caffeé mocha.html" class="buy-now-button">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-11">
+                <div class="card">
+                    <div class="card-image">
+                        <img
+                            src="https://gocodough.com/wp-content/uploads/2021/06/matcha-latte.png">
+                    </div>
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <h3>Macha</h3>
+                        <label>Hindi ka mag sisisi</label>
+                        <br><br>
+                        <div class="Button">
+                            <a href="Macha.html" class="buy-now-button">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-12">
+                <div class="card">
+                    <div class="card-image">
+                        <img
+                            src="https://static.vecteezy.com/system/resources/previews/028/174/738/original/cup-of-hot-chocolate-with-cream-isolated-on-transparent-background-generative-ai-png.png">
+                    </div>
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <h3>Hot chocolate</h3>
+                        <label>Hindi ka mag sisisi</label>
+                        <br><br>
+                        <div class="Button">
+                            <a href="Hot chocolate.html" class="buy-now-button">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-13">
+                <div class="card">
+                    <div class="card-image">
+                        <img
+                            src="https://static.vecteezy.com/system/resources/thumbnails/024/041/505/small/3d-render-of-brownie-milkshake-glass-with-stripe-choco-wafer-rolls-element-png.png">
+                    </div>
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <h3>Vanilla chocolate</h3>
+                        <label>Hindi ka mag sisisi</label>
+                        <br><br>
+                        <div class="Button">
+                            <a href="Vanilla chocolate.html" class="buy-now-button">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="size" id="size">
+                <div class="size-header">
+                    <h2>Size & Price</h2>
+                    <h2>Cafe Go</h2>
+                </div>
+                <div class="size-content">
+                    <div class="size-image">
+                        <img src="https://static.myfigurecollection.net/upload/pictures/2022/06/26/3150895.gif" alt="">
+                    </div>
+                </div>
+                <div class="border" style="border:2px solid #D0B49F;" id="border"></div>
+                <div class="cafegomenu">
+                    <header>
+                        <h1 style="color: burlywood;">Cafe Go Size & Price</h1>
+                    </header>
+                    <div class="small">
+                        <h1>Small</h1>
+                    </div>
+                    <div class="Medium">
+                        <h1>Medium</h1>
+                    </div>
+                    <div class="large">
+                        <h1>Large</h1>
+                    </div>
+                    <div class="border2">
+                    <div class="Espresso">
+                        <h1>Espresso&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                            &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                            &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                            &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                            &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                            &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                            &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                            &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                            &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                        </h1>
+                        <hr class="hr">
+                    </div>
+                    <div class="bord"></div>
+                    <div class="ngi"><span>&#8369;</span>119</div>
+                </div>
+                <div class="bord2"></div>
+                <div class="ngi2"><span>&#8369;</span>129</div>
+                <div class="bord3"></div>
+                <div class="ngi3"><span>&#8369;</span>139</div>
+                <div class="Iced">
+                <h1>Iced macchiato&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8195;
+                </h1>
+                <hr class="hr">
+            </div>
+            <div class="bord4"></div>
+            <div class="ngi4"><span>&#8369;</span>145</div>
+            <div class="bord5"></div>
+            <div class="ngi5"><span>&#8369;</span>155</div>
+            <div class="bord6"></div>
+            <div class="ngi6"><span>&#8369;</span>165</div>
+            <div class="Macchiato">
+                <h1>Macchiato&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8195;&#8195;&#8192;&#8192;&#8192;</h1>
+                    <hr class="hr">
+            </div>
+            <div class="bord7"></div>
+            <div class="ngi7"><span>&#8369;</span>109</div>
+            <div class="bord8"></div>
+            <div class="ngi8"><span>&#8369;</span>119</div>
+            <div class="bord9"></div>
+            <div class="ngi9"><span>&#8369;</span>139</div>
+            <div class="Brewed">
+                 <h1>Brewed coffee&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;</h1>
+                    <hr class="hr">
+            </div>
+            <div class="bord10"></div>
+            <div class="ngi10"><span>&#8369;</span>119</div>
+            <div class="bord11"></div>
+            <div class="ngi11"><span>&#8369;</span>129</div>
+            <div class="bord12"></div>
+            <div class="ngi12"><span>&#8369;</span>149</div>
+            <div class="Caramel">
+            <h1>Caramel macchiato&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;</h1>
+            <hr class="hr">
+            </div>
+            <div class="bord13"></div>
+            <div class="ngi13"><span>&#8369;</span>105</div>
+            <div class="bord14"></div>
+            <div class="ngi14"><span>&#8369;</span>110</div>
+            <div class="bord15"></div>
+            <div class="ngi15"><span>&#8369;</span>129</div>
+            <div class="Café">
+            <h1>Café misto&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;</h1>
+            <hr class="hr">
+            </div>
+            <div class="bord16"></div>
+            <div class="ngi16"><span>&#8369;</span>129</div>
+            <div class="bord17"></div>
+            <div class="ngi17"><span>&#8369;</span>139</div>
+            <div class="bord18"></div>
+            <div class="ngi18"><span>&#8369;</span>169</div>
+            <div class="Irish">
+            <h1>Irish cream americano&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                </h1>
+            <hr class="hr">
+            </div>
+            <div class="bord19"></div>
+            <div class="ngi19"><span>&#8369;</span>139</div>
+            <div class="bord20"></div>
+            <div class="ngi20"><span>&#8369;</span>149</div>
+            <div class="bord21"></div>
+            <div class="ngi21"><span>&#8369;</span>159</div>
+            <div class="Americano">
+            <h1>Americano&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;</h1>
+            <hr class="hr">
+            </div>
+            <div class="bord22"></div>
+            <div class="ngi22"><span>&#8369;</span>149</div>
+            <div class="bord23"></div>
+            <div class="ngi23"><span>&#8369;</span>159</div>
+            <div class="bord24"></div>
+            <div class="ngi24"><span>&#8369;</span>169</div>
+            <div class="Latte">
+            <h1>Iced Latte&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;</h1>
+            <hr class="hr">
+            </div>
+            <div class="bord25"></div>
+            <div class="ngi25"><span>&#8369;</span>169</div>
+            <div class="bord26"></div>
+            <div class="ngi26"><span>&#8369;</span>179</div>
+            <div class="bord27"></div>
+            <div class="ngi27"><span>&#8369;</span>189</div>
+            <div class="Caffeé">
+            <h1>Caffeé mocha&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;</h1>
+            <hr class="hr">
+            </div>
+            <div class="bord28"></div>
+            <div class="ngi28"><span>&#8369;</span>189</div>
+            <div class="bord29"></div>
+            <div class="ngi29"><span>&#8369;</span>199</div>
+            <div class="bord30"></div>
+            <div class="ngi30"><span>&#8369;</span>210</div>
+            <div class="Macha">
+            <h1>Macha&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;</h1>
+            <hr class="hr">
+            </div>
+            <div class="bord31"></div>
+            <div class="ngi31"><span>&#8369;</span>199</div>
+            <div class="bord32"></div>
+            <div class="ngi32"><span>&#8369;</span>219</div>
+            <div class="bord33"></div>
+            <div class="ngi33"><span>&#8369;</span>230</div>
+            <div class="Hot">
+            <h1>Hot chocolate&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;</h1>
+            <hr class="hr">
+            </div>
+            <div class="bord34"></div>
+            <div class="ngi34"><span>&#8369;</span>129</div>
+            <div class="bord35"></div>
+            <div class="ngi35"><span>&#8369;</span>149</div>
+            <div class="bord36"></div>
+            <div class="ngi36"><span>&#8369;</span>169</div>
+            <div class="Vanilla">
+            <h1>Vanilla chocolate&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;</h1>
+            <hr class="hr">
+            </div>
+            <div class="bord37"></div>
+            <div class="ngi37"><span>&#8369;</span>159</div>
+            <div class="bord38"></div>
+            <div class="ngi38"><span>&#8369;</span>179</div>
+            <div class="bord39"></div>
+            <div class="ngi39"><span>&#8369;</span>189</div>
+            <div class="mess">
+                <h1>Thank you for buying the Coffee From CafeGo!<br>&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;
+                    &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;Come Again!</h1>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+<html>

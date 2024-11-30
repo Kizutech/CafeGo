@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CafeGo Log In</title>
+    </head>
+    <head>
+        <style>
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #C19A6B;
+	color: #fff;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.body{
+	position: absolute;
+	top: 80px;
+	left: 0px;
+	right: 0px;
+	bottom: 250px;
+	width: auto;
+	height: auto;
+	background-image: url(https://static.myfigurecollection.net/upload/pictures/2022/06/26/3150895.gif);
+	background-size: cover;
+	
+}
+
+.grad{
+	position: absolute;
+	top: 90px;
+	left: 0px;
+	right: 0px;
+	bottom: 250px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); 
+	z-index: 1;
+	opacity: 0.7;
+}
+
+.header{
+	position: absolute;
+	top: calc(40% - 35px);
+	left: calc(50% - 255px);
+	z-index: 2;	
+}
+
+.header div{
+	float: left;
+	color: #000000;
+	font-family: 'Exo', sans-serif;
+	font-size: 35px;
+	font-weight: 200;
+}
+
+.header div span{
+	color: #5379fa !important;
+}
+
+.login{
+	position: absolute;
+	top: calc(40% - 75px);
+	left: calc(50% - 50px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.login input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(0, 0, 0, 0.6);
+	border-radius: 2px;
+	color: #000000;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.login input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(0, 0, 0, 0.6);
+	border-radius: 2px;
+	color: #000000;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.login input[type=button]{
+	width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #000000;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #000000;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.login input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.login input[type=button]:active{
+	opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(0, 0, 0, 0.9);
+}
+
+.login input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(0, 0, 0, 0.9);
+}
+
+.login input[type=button]:focus{
+	outline: none;
+}
+
+::-webkit-input-placeholder{
+   color: rgba(0, 0, 0, 0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(0, 0, 0, 0.6);
+}
+.bg{
+	background-color: rgb(255, 255, 255);
+	position: absolute;
+	top: 28%;
+	right: 36%;
+	width: 30%;
+	height:25%;
+	border-radius: 25px;
+}
+.bg2{
+	background-color: #C19A6B;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height:9%;
+}
+.bg2{
+	background-color: #C19A6B;
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	height:9%;
+}
+.bg3{
+	background-color: #C19A6B;
+	position: absolute;
+	top: 679px;
+	width: 100%;
+	height:5%;
+}
+.bg4{
+	background-color: #ffffff;
+	position: absolute;
+	top: 75%;
+	width: 50.50%;
+	height: 25%;
+}		
+.bg5{
+	background-color: #ffffff;
+	position: absolute;
+	top: 75%;
+	right: 0%;
+	width: 49%;
+	height: 25%;
+}
+.cafego{
+	position: absolute;
+	color: #000000;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	right: 93%;
+	top: -1%;
+	font-size:large;
+}
+.aboutus{
+	position: absolute;
+	color: #000000;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	right: 15%;
+	top: 1%;
+}
+.needhelp{
+	position: absolute;
+	color: #000000;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	right: 5%;
+	top: 1%;
+}
+.details{
+	color:#000000;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	top: 75%;
+	position: absolute;
+	left: 15%;
+}
+.website{
+	color:#000000;
+	font-size:xx-small;
+	top: 80%;
+	position: absolute;
+	left: 13%;
+
+}
+.website2{
+	color:#000000;
+	font-size:xx-small;
+	top: 82%;
+	position: absolute;
+	left: 12%;
+
+}
+.website3{
+	color:#000000;
+	font-size:xx-small;
+	top: 84%;
+	position: absolute;
+	left: 16%;
+
+}
+.links{
+	color:#000000;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	top: 75%;
+	position: absolute;
+	right:25%;
+}
+.aboutus2{
+	color:#000000;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: x-large;
+	top: 80%;
+	position: absolute;
+	right:35%;
+}
+.needhelp2{
+	color:#000000;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: x-large;
+	top: 80%;
+	position: absolute;
+	right:23%;
+}
+.contact{
+	color:#000000;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: x-large;
+	top: 80%;
+	position: absolute;
+	right:13%;
+}
+.logo{
+	position: absolute;
+	top: 30%;
+	height: 50px;
+	left: 35%;
+	float: left;
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="body"></div>
+		<div class="grad"></div>
+		<div class="grad2"></div>
+		<div class="header">
+			<div><span></span></div>
+		</div>
+		<br>
+		<div class="login">
+				<input type="text" placeholder="username" name="user"><br>
+				<input type="password" placeholder="password" name="password"><br>
+				<a href = "Home.html"><input type="button" value="Login"></a>
+		</div>
+		<div class="bg"></div>
+	    <div class="bg2"></div>
+		<div class="bg3"></div>
+		<div class="cafego">
+			<h1>CafeGo</h1>
+		</div>
+		<div class="aboutus">
+			<h1>About Us</h1>
+		</div>
+		<div class="needhelp">
+			<h1>Need Help?</h1>
+		</div>
+		<div class="bg4"></div>
+		<div class="bg5"></div>
+		<div class="details">
+			<h1>Details about this website</h1>
+		</div>
+		<div class="website">
+				<h1>This website is created	as a school project.
+			</h1>
+		</div>
+		<div class="website2">
+			<h1>All products youu brought are all fictional and for
+		</h1>
+	</div>
+	<div class="website3">
+		<h1>entertainment purposes only.
+	</h1>
+</div>
+<div class="links">
+	<h1>Links</h1>
+</div>
+<div class="aboutus2">
+<a href=""><p style="color:rgb(0, 0, 0)">About Us</p></a>
+</div>
+<div class="needhelp2">
+	<a href=""><p style="color:rgb(0, 0, 0)">Need Help?</p></a>
+	</div>
+    <div class="contact">
+		<a href=""><p style="color:rgb(0, 0, 0)">Contact Us</p></a>
+		</div>
+		<div class="logo">
+			<img src="https://i.ibb.co/xqCMFqw/371509563-1520752665149850-4863602814683537047-n-removebg-preview.png">
+		</div>
+    </body>	
+</html>
